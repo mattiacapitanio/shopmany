@@ -26,7 +26,7 @@ class HealthCheck implements RequestHandlerInterface
         $mySqlCheck->name = "mysql";
         $mySqlCheck->status = "unhealthy";
         $mySqlCheck->error = "";
-        $mySqlCheck->conn = "mysql:host=$this->hostname;port=3306;dbname=$this->dbname";
+        // $mySqlCheck->conn = "mysql:host=$this->hostname;port=3306;dbname=$this->dbname";
 
         try {
             $this->pdo = new PDO("mysql:host=$this->hostname;port=3306;dbname=$this->dbname", $this->username, $this->password);
